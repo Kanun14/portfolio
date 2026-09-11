@@ -1,0 +1,757 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    background: #f8fafc;
+    color: #334155;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(248, 250, 252, 0.92);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-container {
+    width: min(1100px, 92%);
+    min-height: 70px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #7897c4;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #64748b;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #7897c4;
+}
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    width: min(1100px, 92%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+
+/* ช่องรูป */
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: #eaf1f8;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 15px 35px rgba(71, 85, 105, 0.15);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.hello {
+    color: #7897c4;
+    font-size: 1.1rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #718fc0;
+}
+
+.hero h2 {
+    margin: 15px 0;
+
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    color: #64748b;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: auto;
+
+    color: #64748b;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 11px 23px;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #7897c4;
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #b9c9df;
+    color: #64748b;
+}
+
+.secondary-btn:hover {
+    background: #edf3fa;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+    width: min(1100px, 92%);
+    margin: auto;
+
+    padding: 100px 0;
+}
+
+.light-section {
+    width: 100%;
+
+    padding-left: max(4%, calc((100% - 1100px) / 2));
+    padding-right: max(4%, calc((100% - 1100px) / 2));
+
+    background: #eef4f9;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #91a8c7;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+}
+
+.section-subtitle {
+    color: #7b8798;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 60px;
+
+    margin-top: 40px;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.info-box {
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    border: 1px solid #e2e8f0;
+
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box > span {
+    font-size: 1.8rem;
+}
+
+.info-box small {
+    display: block;
+    color: #94a3b8;
+}
+
+.info-box strong {
+    display: block;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    border: 1px solid #e2e8f0;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #718096;
+    margin: 10px 0 20px;
+}
+
+.skill-bar {
+    height: 8px;
+
+    background: #e8edf4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.volleyball {
+    width: 85%;
+    background: #91a8c7;
+}
+
+.art {
+    width: 80%;
+    background: #a9bcd5;
+}
+
+.creative {
+    width: 90%;
+    background: #819ec5;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.project-card {
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-image {
+    height: 200px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 5rem;
+
+    background: #eaf1f7;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-tag {
+    color: #7897c4;
+
+    background: #edf3fa;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+}
+
+.project-content h3 {
+    margin: 15px 0 8px;
+}
+
+.project-content p {
+    color: #718096;
+}
+
+
+/* =========================
+   ACHIEVEMENT
+========================= */
+
+.achievement {
+    margin-top: 40px;
+
+    padding: 35px;
+
+    display: flex;
+    gap: 25px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    border: 1px solid #e2e8f0;
+}
+
+.achievement-icon {
+    min-width: 75px;
+    height: 75px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 20px;
+
+    background: #eef3f9;
+
+    font-size: 2.5rem;
+}
+
+.achievement-year {
+    color: #7c9cc9;
+}
+
+.achievement-content p {
+    color: #718096;
+}
+
+.award {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    background: #f1f5f9;
+}
+
+
+/* =========================
+   GOAL
+========================= */
+
+.goal-section {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #dfeaf4;
+}
+
+.goal-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.goal-content > span {
+    color: #7189aa;
+}
+
+.goal-content h2 {
+    margin: 15px 0;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.goal-content p {
+    color: #64748b;
+}
+
+.goal-line {
+    width: 60px;
+    height: 3px;
+
+    margin: 25px auto;
+
+    background: #8ca5c5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    margin-top: 40px;
+
+    padding: 40px;
+
+    background: #eef4f9;
+
+    border-radius: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+}
+
+.contact-box p {
+    color: #718096;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    padding: 18px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.contact-item > span {
+    font-size: 1.8rem;
+}
+
+.contact-item small {
+    display: block;
+    color: #94a3b8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #26364a;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #7897c4;
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background: #f8fafc;
+
+        display: none;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 70px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
